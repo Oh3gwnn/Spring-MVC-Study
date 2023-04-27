@@ -27,6 +27,4 @@ public class HelloServlet extends HttpServlet {
         // F12 - Network에서 Content-type 확인 가능
         // HTTP 응답에서 Content-Length는 WAS가 자동 생성
     }
-
-
 }
