@@ -15,7 +15,7 @@ import java.io.IOException;
  * 2. POST는 GET 쿼리 파라미터 형식을 지원한다.
  * `application/x-www-form-urlencoded` 형식은 GET 쿼리 파라미터 형식과 같다.
  * 따라서 쿼리 파라미터 조회 메서드(request.getParameter())를 그대로 사용하면 된다.
- * 정리: || request.getParameter() -->  GET URL 쿼리 파라미터 형식  ||
+ * 정리  || request.getParameter() -->  GET URL 쿼리 파라미터 형식  ||
  *      || 두 형식 모두 지원              POST HTML Form 형식      ||
  *
  * 3. PostMan으로 form 형식 실습 가능
