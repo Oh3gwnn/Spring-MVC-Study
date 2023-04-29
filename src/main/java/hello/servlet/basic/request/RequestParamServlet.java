@@ -7,11 +7,18 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.Enumeration;
 
 /**
  * 1. 파라미터 전송 기능
  * http://localhost:8080/request-param?username=hello&age=20
+ *
+ * 2. POST는 GET 쿼리 파라미터 형식을 지원한다.
+ * `application/x-www-form-urlencoded` 형식은 GET 쿼리 파라미터 형식과 같다.
+ * 따라서 쿼리 파라미터 조회 메서드(request.getParameter())를 그대로 사용하면 된다.
+ * 정리: || request.getParameter() -->  GET URL 쿼리 파라미터 형식  ||
+ *      || 두 형식 모두 지원              POST HTML Form 형식      ||
+ *
+ * 3. PostMan으로 form 형식 실습 가능
  *
  **/
 
@@ -42,6 +49,8 @@ public class RequestParamServlet extends HttpServlet {
             System.out.println("username = " + name);
         }
 
+        response.getWriter().write("OK");
+
         /**
          *  단일 파라미터: request.getParameter()
          *  복수 파라미터: request.getParameterValues()
@@ -49,6 +58,6 @@ public class RequestParamServlet extends HttpServlet {
          *  보통 중복으로 보낼 경우가 없다.
          *  그냥 중복 사용할 경우 request.getParameterValues()를 사용한다는 것만 인지
          */
-        response.getWriter().write("OK");
+
     }
 }
