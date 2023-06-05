@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "memberSaveServlet", urlPatterns = "servlet/members/save")
+@WebServlet(name = "memberSaveServlet", urlPatterns = "/servlet/members/save")
 public class MemberSaveServlet extends HttpServlet {
 
     private MemberRepository memberRepository = MemberRepository.getInstance();
@@ -30,7 +30,7 @@ public class MemberSaveServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
 
         PrintWriter w = response.getWriter();
-        w.write("<html>\n" +
+        w.write("<html lang=\"ko\">\n" +
                 "<head>\n" +
                 " <meta charset=\"UTF-8\">\n" +
                 "</head>\n" +

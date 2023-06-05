@@ -21,7 +21,7 @@ public class MemberFormServlet extends HttpServlet {
 
         PrintWriter w = response.getWriter();
         w.write("<!DOCTYPE html>\n" +
-                "<html>\n" +
+                "<html lang=\"ko\">\n" +
                 "<head>\n" +
                 " <meta charset=\"UTF-8\">\n" +
                 " <title>Title</title>\n" +
