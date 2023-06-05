@@ -24,7 +24,7 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/plain");  // 단순 문자
         response.setCharacterEncoding("utf-8"); // 인코딩 값(한글 가능)
         response.getWriter().write("hello " + username); // wirte(): in http message body
-        // F12 - Network에서 Content-type 확인 가능
+        // Chrome - F12 - Network에서 Content-type 확인 가능
         // HTTP 응답에서 Content-Length는 WAS가 자동 생성
     }
 }
