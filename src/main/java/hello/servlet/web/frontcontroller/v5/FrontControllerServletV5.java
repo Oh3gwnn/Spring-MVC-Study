@@ -54,12 +54,14 @@ public class FrontControllerServletV5 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // v3, v4의 각 기능 컨트롤러 -> HandlerAdapter instanceof 체크(v3인지 v4인지) 후 반환
         Object handler = getHandler(request);
         if (handler == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
 
+        // 맞는 HandlerAdapter 연결
         MyHandlerAdapter adapter = getHandlerAdapter(handler);
 
         ModelView mv = adapter.handle(request, response, handler);
